@@ -2,11 +2,11 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · **Deutsch** · [Magyar](README.hu.md)
 
-**Version:** 1.0.0 · **Zuletzt aktualisiert:** 2026-10-14
+**Version:** 2.1.0 · **Zuletzt aktualisiert:** 2026-10-27
 
 Oberflächensprachen: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
-Lexicon ist eine Wörterbuch-Engine, die vollständig offline in einer einzigen HTML-Datei läuft. Sie enthält kein vollständiges Wörterbuch: Du bringst deine eigenen Wörterbücher mit (TSV/CSV, JSON, StarDict, dictd, XDXF), speicherst sie in IndexedDB und durchsuchst sie sofort: Präfix, exakt, ohne diakritische Zeichen, näherungsweise (Damerau–Levenshtein), Flexionsformen, Volltext in den Definitionen und Platzhalter (`?`, `*`). Es gibt Verlauf, Favoriten, Wort des Tages, Karteikarten mit verteilter Wiederholung, Export und Rechtschreibprüfung. Das mitgelieferte Set (345 originale Einträge auf Rumänisch) ist ein **Demo-Set, kein vollständiges Wörterbuch**.
+Lexicon ist eine Wörterbuch-Engine, die vollständig offline in einer einzigen HTML-Datei läuft. Sie enthält kein vollständiges Wörterbuch: Du bringst deine eigenen Wörterbücher mit (TSV/CSV, JSON, StarDict, dictd, XDXF), speicherst sie in IndexedDB und durchsuchst sie sofort: Präfix, exakt, ohne diakritische Zeichen, näherungsweise (Damerau–Levenshtein), Flexionsformen, Volltext in den Definitionen und Platzhalter (`?`, `*`). Es gibt Verlauf, Favoriten, Wort des Tages, Karteikarten mit verteilter Wiederholung, Export und Rechtschreibprüfung. Das mitgelieferte Set (431 originale Einträge auf Rumänisch) ist ein **Demo-Set, kein vollständiges Wörterbuch**.
 
 ![Screenshot](screenshot.de.png)
 
