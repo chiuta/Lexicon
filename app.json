@@ -13,8 +13,8 @@
     "localStorage"
   ],
   "storageKeys": [],
-  "sizeBytes": 386976,
-  "sha256": "deb69f66270414d319599df01850f43e36188b0d20e8b48bc656e91e4bfaf096",
+  "sizeBytes": 387015,
+  "sha256": "18405743042371d3674b2822045f517f7ca86a044021bdb97456156eac700450",
   "csp": {
     "present": true,
     "directives": {
@@ -38,7 +38,16 @@
   "features": {
     "export": true,
     "import": true,
-    "i18n": [],
+    "i18n": [
+      "ro",
+      "en",
+      "fr",
+      "it",
+      "es",
+      "pt",
+      "hu",
+      "de"
+    ],
     "pwa": {
       "manifest": true,
       "serviceWorker": true
@@ -51,7 +60,7 @@
     ]
   },
   "kit": {
-    "version": "1.1.1",
+    "version": "1.2.0",
     "modules": [
       "core",
       "label",
