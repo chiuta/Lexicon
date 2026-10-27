@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · **Italiano** · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versione:** 2.1.0 · **Ultimo aggiornamento:** 2026-10-27
+**Versione:** 2.2.0 · **Ultimo aggiornamento:** 2026-10-27
 
 Lingue dell'interfaccia: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -34,7 +34,7 @@ La cartella `exemple/` contiene `model.tsv` e `model.json` (formato minimo: paro
 ## Cosa NON fa e i suoi limiti
 - Non ha contenuto lessicografico proprio al di fuori del set dimostrativo.
 - Il file viene letto interamente in memoria all'importazione; i file molto grandi (centinaia di MB) possono superare la memoria del browser.
-- La ricerca nelle definizioni scorre tutte le voci (senza indice invertito) e non ordina per pertinenza.
+- La ricerca nelle definizioni scorre tutte le voci (senza indice invertito) e ordina i risultati euristicamente per rilevanza (occorrenze, lemma, lunghezza — non BM25).
 - I collegamenti esterni negli articoli non sono attivi: vengono mostrati come testo con l'indirizzo.
 - XDXF è supportato solo nella forma semplice; l'HTML viene ripulito da un parser proprio con un elenco di tag consentiti, quindi le formattazioni complesse vanno perse.
 - L'importazione di 300.000 voci è lenta (vedi sotto); la ricerca successiva è istantanea.

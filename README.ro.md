@@ -2,7 +2,7 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 2.1.0 · **Ultima actualizare:** 2026-10-27
+**Versiune:** 2.2.0 · **Ultima actualizare:** 2026-10-27
 
 **Stare:** stabil · **Offline:** complet (nicio cerere de rețea; ghidul conține doar text)
 
@@ -36,7 +36,7 @@ Folderul `exemple/` conține `model.tsv` și `model.json` (formatul minim: cuvâ
 ## Ce NU face și limitele
 - Nu are conținut lexicografic propriu în afara setului demonstrativ.
 - Fișierul se citește integral în memorie la import; fișierele foarte mari (sute de MB) pot depăși memoria browserului.
-- Căutarea în definiții parcurge toate intrările (fără index inversat) și nu ordonează după relevanță.
+- Căutarea în definiții parcurge toate intrările (fără index inversat) și ordonează euristic rezultatele după relevanță (apariții, cuvânt-titlu, lungimea definiției — nu BM25).
 - Legăturile externe din articole nu sunt active: se afișează ca text cu adresa.
 - XDXF este acceptat doar în forma simplă; HTML-ul este curățat de un parser propriu cu listă de etichete permise, deci formatările complexe se pierd.
 - Importul a 300.000 de intrări este lent (vezi mai jos); căutarea după aceea este instantanee.
@@ -72,7 +72,13 @@ MIT — vezi fișierul `LICENSE` din rădăcina depozitului.
 - **Ghid în aplicație** („Unde găsești dicționare libere”, 8 limbi): FreeDict (StarDict/dictd; în pagina consultată nu apărea o pereche cu româna, iar licența datelor nu era indicată), Wiktionary (CC BY-SA, cu atribuire; extrageri precum Wiktextract/kaikki.org sunt prelucrări), dexonline.ro (un articol de blog indică GNU GPL pentru majoritatea datelor; **de verificat** pe site) și propriul dicționar. Informațiile sunt verificate pe web la 2026-10-27, **nu sunt consultanță juridică**; aplicația **nu descarcă nimic**.
 - Traducerile ghidului în afara ro/en sunt generate automat.
 
+## Clasare după relevanță în căutarea textuală (2.2.0, 2026-10-27)
+
+- Căutarea textuală (în definiții) ordonează acum rezultatele euristic: apariții la început de cuvânt, cuvinte întregi (dublu), termenul apărând și în cuvântul-titlu (+10), împărțit la `1 + log10(lungimea definiției)`. **Nu este BM25** și nu pretinde asta; indexul textual acoperă doar definițiile, deci bonusul pentru cuvântul-titlu se aplică doar dacă și definiția conține termenul. Candidații se strâng până la 5 × limita afișată, apoi se sortează; peste această valoare apare semnul „+” de trunchiere.
+- **Rămân neimplementate:** dicționar românesc complet inclus (licențe neconfirmate) și descărcări în aplicație (contrazic filosofia offline).
+
 ## Istoric
 
+- 2.2.0 — 2026-10-27 (anterior: 2.1.0): clasare după relevanță în căutarea textuală; teste actualizate.
 - 2.1.0 — 2026-10-27 (anterior: 1.0.0): set demonstrativ de 431 intrări; ghid de dicționare libere.
 - 1.0.0 — 2026-10-14: prima versiune.
