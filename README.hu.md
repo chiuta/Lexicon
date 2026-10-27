@@ -2,11 +2,11 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · **Magyar**
 
-**Verzió:** 1.0.0 · **Utolsó frissítés:** 2026-10-14
+**Verzió:** 2.1.0 · **Utolsó frissítés:** 2026-10-27
 
 A felület nyelvei: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
-A Lexicon egy szótármotor, amely teljesen offline, egyetlen HTML-fájlban fut. Nem tartalmaz teljes szótárat: te hozod a saját szótáraidat (TSV/CSV, JSON, StarDict, dictd, XDXF), IndexedDB-ben tárolod őket, és azonnal keresel bennük: előtag, pontos, ékezetek nélküli, hozzávetőleges (Damerau–Levenshtein), ragozott alakok, teljes szöveg a definíciókban és helyettesítő karakterek (`?`, `*`). Van előzmény, kedvencek, a nap szava, térközökkel ismétlő kártyák, exportálás és helyesírás-ellenőrzés. A mellékelt készlet (345 eredeti román nyelvű szócikk) **bemutató készlet, nem teljes szótár**.
+A Lexicon egy szótármotor, amely teljesen offline, egyetlen HTML-fájlban fut. Nem tartalmaz teljes szótárat: te hozod a saját szótáraidat (TSV/CSV, JSON, StarDict, dictd, XDXF), IndexedDB-ben tárolod őket, és azonnal keresel bennük: előtag, pontos, ékezetek nélküli, hozzávetőleges (Damerau–Levenshtein), ragozott alakok, teljes szöveg a definíciókban és helyettesítő karakterek (`?`, `*`). Van előzmény, kedvencek, a nap szava, térközökkel ismétlő kártyák, exportálás és helyesírás-ellenőrzés. A mellékelt készlet (431 eredeti román nyelvű szócikk) **bemutató készlet, nem teljes szótár**.
 
 ![képernyőkép](screenshot.hu.png)
 

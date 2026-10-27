@@ -2,11 +2,11 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · **Español** · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versión:** 1.0.0 · **Última actualización:** 2026-10-14
+**Versión:** 2.1.0 · **Última actualización:** 2026-10-27
 
 Idiomas de la interfaz: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
-Lexicon es un motor de diccionario que funciona completamente sin conexión, en un único archivo HTML. No incluye un diccionario completo: tú aportas tus propios diccionarios (TSV/CSV, JSON, StarDict, dictd, XDXF), los guardas en IndexedDB y los consultas al instante: prefijo, exacto, sin diacríticos, aproximado (Damerau–Levenshtein), formas flexionadas, texto completo en las definiciones y comodines (`?`, `*`). Tiene historial, favoritos, palabra del día, tarjetas de estudio con repetición espaciada, exportación y corrección ortográfica. El conjunto incluido (345 entradas originales en rumano) es un **conjunto de demostración, no un diccionario completo**.
+Lexicon es un motor de diccionario que funciona completamente sin conexión, en un único archivo HTML. No incluye un diccionario completo: tú aportas tus propios diccionarios (TSV/CSV, JSON, StarDict, dictd, XDXF), los guardas en IndexedDB y los consultas al instante: prefijo, exacto, sin diacríticos, aproximado (Damerau–Levenshtein), formas flexionadas, texto completo en las definiciones y comodines (`?`, `*`). Tiene historial, favoritos, palabra del día, tarjetas de estudio con repetición espaciada, exportación y corrección ortográfica. El conjunto incluido (431 entradas originales en rumano) es un **conjunto de demostración, no un diccionario completo**.
 
 ![captura de pantalla](screenshot.es.png)
 

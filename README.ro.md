@@ -2,11 +2,13 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 1.0.0 · **Ultima actualizare:** 2026-10-14
+**Versiune:** 2.1.0 · **Ultima actualizare:** 2026-10-27
+
+**Stare:** stabil · **Offline:** complet (nicio cerere de rețea; ghidul conține doar text)
 
 Limbile interfeței: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
-Lexicon este un motor de dicționar care rulează complet offline, într-un singur fișier HTML. Nu include un dicționar complet: aduci tu propriile dicționare (TSV/CSV, JSON, StarDict, dictd, XDXF), le păstrezi în IndexedDB și le cauți instant: prefix, exact, fără diacritice, aproximativ (Damerau–Levenshtein), forme flexionare, text integral în definiții și wildcard (`?`, `*`). Are istoric, favorite, cuvântul zilei, flashcards cu repetiție spațiată, export și verificare ortografică. Setul inclus (345 de intrări originale în română) este **set demonstrativ, nu un dicționar complet**.
+Lexicon este un motor de dicționar care rulează complet offline, într-un singur fișier HTML. Nu include un dicționar complet: aduci tu propriile dicționare (TSV/CSV, JSON, StarDict, dictd, XDXF), le păstrezi în IndexedDB și le cauți instant: prefix, exact, fără diacritice, aproximativ (Damerau–Levenshtein), forme flexionare, text integral în definiții și wildcard (`?`, `*`). Are istoric, favorite, cuvântul zilei, flashcards cu repetiție spațiată, export și verificare ortografică. Setul inclus (431 de intrări originale în română) este **set demonstrativ, nu un dicționar complet**.
 
 ![captură](screenshot.ro.png)
 
@@ -64,5 +66,13 @@ Interfața este în română (implicit), engleză, franceză, italiană, spaniol
 ## Licență
 MIT — vezi fișierul `LICENSE` din rădăcina depozitului.
 
+## Set demonstrativ mărit și ghid de dicționare libere (2.1.0, 2026-10-27)
+
+- **Set demonstrativ:** 345 → **431 intrări originale în română** (86 noi, scrise pentru acest proiect; același format). Rămâne un **set demonstrativ, nu un dicționar complet**.
+- **Ghid în aplicație** („Unde găsești dicționare libere”, 8 limbi): FreeDict (StarDict/dictd; în pagina consultată nu apărea o pereche cu româna, iar licența datelor nu era indicată), Wiktionary (CC BY-SA, cu atribuire; extrageri precum Wiktextract/kaikki.org sunt prelucrări), dexonline.ro (un articol de blog indică GNU GPL pentru majoritatea datelor; **de verificat** pe site) și propriul dicționar. Informațiile sunt verificate pe web la 2026-10-27, **nu sunt consultanță juridică**; aplicația **nu descarcă nimic**.
+- Traducerile ghidului în afara ro/en sunt generate automat.
+
 ## Istoric
+
+- 2.1.0 — 2026-10-27 (anterior: 1.0.0): set demonstrativ de 431 intrări; ghid de dicționare libere.
 - 1.0.0 — 2026-10-14: prima versiune.

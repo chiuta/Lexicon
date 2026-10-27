@@ -2,11 +2,13 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 1.0.0 · **Last updated:** 2026-10-14
+**Version:** 2.1.0 · **Last updated:** 2026-10-27
+
+**Status:** stable · **Offline:** complete (no network requests; the guide is text only)
 
 Interface languages: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
-Lexicon is a dictionary engine that runs entirely offline, in a single HTML file. It does not ship a complete dictionary: you bring your own dictionaries (TSV/CSV, JSON, StarDict, dictd, XDXF), keep them in IndexedDB and search them instantly: prefix, exact, diacritic-insensitive, approximate (Damerau–Levenshtein), inflected forms, full text in definitions and wildcard (`?`, `*`). It has history, favourites, a word of the day, flashcards with spaced repetition, export and spell checking. The bundled set (345 original Romanian entries) is a **demo set, not a complete dictionary**.
+Lexicon is a dictionary engine that runs entirely offline, in a single HTML file. It does not ship a complete dictionary: you bring your own dictionaries (TSV/CSV, JSON, StarDict, dictd, XDXF), keep them in IndexedDB and search them instantly: prefix, exact, diacritic-insensitive, approximate (Damerau–Levenshtein), inflected forms, full text in definitions and wildcard (`?`, `*`). It has history, favourites, a word of the day, flashcards with spaced repetition, export and spell checking. The bundled set (431 original Romanian entries) is a **demo set, not a complete dictionary**.
 
 ![screenshot](screenshot.en.png)
 
@@ -64,5 +66,13 @@ The interface is in Romanian (default), English, French, Italian, Spanish, Portu
 ## Licence
 MIT — see the `LICENSE` file in the repository root.
 
+## Larger demo set and free-dictionary guide (2.1.0, 2026-10-27)
+
+- **Demo set:** 345 → **431 original Romanian entries** (86 new, written for this project; same format). It remains a **demo set, not a complete dictionary**.
+- **In-app guide** ("Where to find free dictionaries", 8 languages): FreeDict (StarDict/dictd; the page consulted listed no Romanian pair and did not state the data licence), Wiktionary (CC BY-SA, attribution required; extractions such as Wiktextract/kaikki.org are derivatives), dexonline.ro (a blog article indicates GNU GPL for most data; **to be verified** on the site) and your own dictionary. Checked on the web on 2026-10-27, **not legal advice**; the app **downloads nothing**.
+- Translations of the guide other than ro/en are machine-generated.
+
 ## History
+
+- 2.1.0 — 2026-10-27 (previous: 1.0.0): 431-entry demo set; free-dictionary guide.
 - 1.0.0 — 2026-10-14: first release.
