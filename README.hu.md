@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · **Magyar**
 
-**Verzió:** 2.1.0 · **Utolsó frissítés:** 2026-10-27
+**Verzió:** 2.2.0 · **Utolsó frissítés:** 2026-10-27
 
 A felület nyelvei: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -34,7 +34,7 @@ Az `exemple/` mappa tartalmazza a `model.tsv` és a `model.json` fájlt (minimá
 ## Amit NEM tud, és korlátai
 - A bemutató készleten kívül nincs saját lexikográfiai tartalma.
 - A fájlt importáláskor teljes egészében beolvassa a memóriába; a nagyon nagy fájlok (több száz MB) meghaladhatják a böngésző memóriáját.
-- A definíciókban való keresés minden szócikket végigjár (fordított index nélkül), és nem rendez relevancia szerint.
+- A definíciókban való keresés minden szócikket végigjár (fordított index nélkül), és a találatokat heurisztikusan relevancia szerint rendezi (előfordulás, címszó, hossz — nem BM25).
 - A cikkekben található külső hivatkozások nem aktívak: szövegként jelennek meg a címmel együtt.
 - Az XDXF csak egyszerű formában támogatott; a HTML-t egy saját elemző tisztítja az engedélyezett címkék listája alapján, ezért az összetett formázások elvesznek.
 - 300 000 szócikk importálása lassú (lásd alább); utána a keresés azonnali.

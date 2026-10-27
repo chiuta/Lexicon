@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · **Français** · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version :** 2.1.0 · **Dernière mise à jour :** 2026-10-27
+**Version :** 2.2.0 · **Dernière mise à jour :** 2026-10-27
 
 Langues de l'interface : **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -34,7 +34,7 @@ Le dossier `exemple/` contient `model.tsv` et `model.json` (format minimal : mot
 ## Ce qu'il ne fait PAS et ses limites
 - Il n'a pas de contenu lexicographique propre en dehors du jeu de démonstration.
 - Le fichier est lu intégralement en mémoire à l'import ; les très gros fichiers (des centaines de Mo) peuvent dépasser la mémoire du navigateur.
-- La recherche dans les définitions parcourt toutes les entrées (sans index inversé) et ne trie pas par pertinence.
+- La recherche dans les définitions parcourt toutes les entrées (sans index inversé) et classe les résultats heuristiquement par pertinence (occurrences, mot-vedette, longueur — pas BM25).
 - Les liens externes dans les articles ne sont pas actifs : ils sont affichés sous forme de texte avec l'adresse.
 - XDXF n'est pris en charge que sous sa forme simple ; le HTML est nettoyé par un analyseur maison avec une liste blanche de balises, de sorte que les mises en forme complexes sont perdues.
 - L'import de 300 000 entrées est lent (voir ci-dessous) ; la recherche ensuite est instantanée.

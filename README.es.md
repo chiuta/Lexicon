@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · **Español** · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versión:** 2.1.0 · **Última actualización:** 2026-10-27
+**Versión:** 2.2.0 · **Última actualización:** 2026-10-27
 
 Idiomas de la interfaz: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -34,7 +34,7 @@ La carpeta `exemple/` contiene `model.tsv` y `model.json` (formato mínimo: pala
 ## Lo que NO hace y sus límites
 - No tiene contenido lexicográfico propio aparte del conjunto de demostración.
 - El archivo se lee íntegramente en memoria al importar; los archivos muy grandes (cientos de MB) pueden superar la memoria del navegador.
-- La búsqueda en las definiciones recorre todas las entradas (sin índice invertido) y no ordena por relevancia.
+- La búsqueda en las definiciones recorre todas las entradas (sin índice invertido) y ordena los resultados heurísticamente por relevancia (apariciones, entrada, longitud — no BM25).
 - Los enlaces externos de los artículos no están activos: se muestran como texto con la dirección.
 - XDXF solo se admite en su forma simple; el HTML se depura con un analizador propio con una lista de etiquetas permitidas, por lo que los formatos complejos se pierden.
 - La importación de 300 000 entradas es lenta (véase más abajo); la búsqueda posterior es instantánea.

@@ -18,6 +18,7 @@ const URL_APP = pathToFileURL(APP).href;
 const AXE = process.env.AXE_PATH || '/tmp/claude-0/-home-claude/78529928-3825-51c3-b9bd-0e81655ab6bc/scratchpad/sweep/node_modules/axe-core/axe.min.js';
 const SHOT = process.env.SHOT_PATH || path.join(here, '..', 'screenshot.png');
 const html = fs.readFileSync(APP, 'utf8');
+const APPJ = JSON.parse(fs.readFileSync(path.join(here, '..', 'app.json'), 'utf8'));   // versiunea/data se citesc din app.json
 
 let pass = 0, fail = 0;
 const failures = [], metrics = {};
@@ -154,10 +155,10 @@ console.log('1. Pornire, meta, CSP, rețea, set demonstrativ');
     leak: [...document.querySelectorAll('[data-i18n]')].filter(e => e.textContent.trim() === e.dataset.i18n).map(e => e.dataset.i18n),
     i18n: Lexicon.i18nCheck()
   }));
-  ok('application-version 1.0.0', info.ver === '1.0.0', info.ver);
-  ok('last-updated 2026-10-14', info.upd === '2026-10-14', info.upd);
+  ok('application-version = app.json', info.ver === APPJ.version, info.ver);
+  ok('last-updated = app.json', info.upd === APPJ.updated, info.upd);
   ok('meta description', info.desc);
-  ok('#app-version vizibil', info.vis === 'v 1.0.0 · 2026-10-14', info.vis);
+  ok('#app-version vizibil', info.vis === 'v ' + APPJ.version + ' · ' + APPJ.updated, info.vis);
   ok('html[lang]=ro implicit', info.lang === 'ro', info.lang);
   ok('CSP: default-src none, fără unsafe-eval, script-src doar hash', /default-src 'none'/.test(info.csp) && !/unsafe-eval/.test(info.csp) && /script-src 'sha256-[A-Za-z0-9+\/=]+'/.test(info.csp) && !/script-src[^;]*unsafe-inline/.test(info.csp) && /connect-src 'none'/.test(info.csp) && /base-uri 'none'/.test(info.csp) && /form-action 'none'/.test(info.csp), info.csp);
   ok('0 violări CSP', info.viol.length === 0, info.viol);
@@ -169,14 +170,14 @@ console.log('1. Pornire, meta, CSP, rețea, set demonstrativ');
     ok('manifest: un singur link către manifest.webmanifest valid, înregistrare SW doar în blocul pwa', !!info.manifest && (html.match(/rel="manifest"/g) || []).length === 1 && mf && mf.start_url === './' && mf.display === 'standalone' && !/serviceWorker/.test(noPwa), {manifest: info.manifest, start: mf && mf.start_url});
     const csp = /http-equiv="Content-Security-Policy"\s+content="([^"]*)"/.exec(html)[1];
     ok("CSP: manifest-src 'self', worker-src 'self' blob:", /manifest-src 'self'(;|$)/.test(csp) && /worker-src 'self' blob:(;|$)/.test(csp), csp);
-    for (const [mod, a] of [['build.mjs', 'check'], ['pwa/pwa.mjs', 'check']]) { const r = spawnSync(process.execPath, [path.resolve(here, '../../../fff-kit', mod), a, path.resolve(here, '..')], {encoding: 'utf8'}); ok(mod + ' ' + a, r.status === 0, r.stdout + r.stderr); }
+    for (const [mod, a] of [['build.mjs', 'check'], ['pwa/pwa.mjs', 'check']]) { const r = spawnSync(process.execPath, [path.resolve(process.env.FFF_KIT || path.resolve(here, '../../../fff-kit'), mod), a, path.resolve(here, '..')], {encoding: 'utf8'}); ok(mod + ' ' + a, r.status === 0, r.stdout + r.stderr); }
   }
   ok('0 pageerror/console error', t.errors.length === 0, t.errors);
   ok('0 cereri de rețea', t.net.length === 0, t.net);
   ok('niciun text de interfață nu a rămas cheie brută', info.leak.length === 0, info.leak);
   ok('toate cheile i18n au 8 traduceri', info.i18n.bad.length === 0 && info.i18n.keys > 150, info.i18n);
   const s = await st(t.page);
-  ok('set demonstrativ instalat (≈300+ intrări)', s.dicts.length === 1 && s.dicts[0].count >= 300 && s.dicts[0].count < 400 && s.dicts[0].format === 'demo', s.dicts);
+  ok('set demonstrativ instalat (≈300+ intrări)', s.dicts.length === 1 && s.dicts[0].count >= 300 && s.dicts[0].count < 500 && s.dicts[0].format === 'demo', s.dicts);
   ok('IndexedDB persistent activ', s.persistent === true);
   // scripturi executabile inline: kit (#fff-kit), înregistrare PWA, aplicația; JSON (fff-i18n, fff-info) și text/plain (demo-data) nu se execută
   const scr = [...html.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script>/g)].filter(m => !/\bsrc=/.test(m[1]) && !/type="(application\/json|text\/plain)"/.test(m[1]));
@@ -862,7 +863,7 @@ console.log('8. Flashcards, export (CSV/JSON/Markdown), verificare ortografie, c
   await tab(p, 'tools');
   const ub = await grab('#u-exp');
   const bundle = JSON.parse(ub.text);
-  ok('copie de rezervă .fff.json: format fff-bundle, app, versiune, chei cu prefix', bundle.format === 'fff-bundle' && bundle.schema === 1 && bundle.app === 'lexicon' && bundle.version === '1.0.0' && bundle.updated === '2026-10-14' && Object.keys(bundle.data).every(k => k.startsWith('fff.lexicon.')) && 'fff.lexicon.fav' in bundle.data && 'fff.lexicon.srs' in bundle.data && /\.fff\.json$/.test(ub.name), Object.keys(bundle.data));
+  ok('copie de rezervă .fff.json: format fff-bundle, app, versiune, chei cu prefix', bundle.format === 'fff-bundle' && bundle.schema === 1 && bundle.app === 'lexicon' && bundle.version === APPJ.version && bundle.updated === APPJ.updated && Object.keys(bundle.data).every(k => k.startsWith('fff.lexicon.')) && 'fff.lexicon.fav' in bundle.data && 'fff.lexicon.srs' in bundle.data && /\.fff\.json$/.test(ub.name), Object.keys(bundle.data));
   await tab(p, 'search');
   while (await p.locator('#favlist [data-rm]').count()) await p.locator('#favlist [data-rm]').first().click();
   ok('favorite golite', (await p.locator('#favlist .ritem').count()) === 0);

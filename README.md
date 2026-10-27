@@ -2,7 +2,7 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 2.1.0 · **Last updated:** 2026-10-27
+**Version:** 2.2.0 · **Last updated:** 2026-10-27
 
 **Status:** stable · **Offline:** complete (no network requests; the guide is text only)
 
@@ -36,7 +36,7 @@ The `exemple/` folder contains `model.tsv` and `model.json` (minimal format: wor
 ## What it does NOT do, and its limits
 - It has no lexicographic content of its own beyond the demo set.
 - The file is read fully into memory on import; very large files (hundreds of MB) may exceed the browser's memory.
-- Searching in definitions scans all entries (no inverted index) and does not sort by relevance.
+- Searching in definitions scans all entries (no inverted index) and ranks text matches heuristically (occurrences, headword match, definition length — not BM25).
 - External links in articles are not active: they are shown as text with the address.
 - XDXF is supported only in its simple form; HTML is sanitised by a custom parser with an allow-list of tags, so complex formatting is lost.
 - Importing 300,000 entries is slow (see below); searching afterwards is instantaneous.
@@ -72,7 +72,13 @@ MIT — see the `LICENSE` file in the repository root.
 - **In-app guide** ("Where to find free dictionaries", 8 languages): FreeDict (StarDict/dictd; the page consulted listed no Romanian pair and did not state the data licence), Wiktionary (CC BY-SA, attribution required; extractions such as Wiktextract/kaikki.org are derivatives), dexonline.ro (a blog article indicates GNU GPL for most data; **to be verified** on the site) and your own dictionary. Checked on the web on 2026-10-27, **not legal advice**; the app **downloads nothing**.
 - Translations of the guide other than ro/en are machine-generated.
 
+## Relevance ranking in text search (2.2.0, 2026-10-27)
+
+- Text search (in definitions) now ranks results heuristically: word-start occurrences, whole-word occurrences (double), the term also appearing in the headword (+10), divided by `1 + log10(definition length)`. **It is not BM25** and does not claim to be; the text index covers definitions only, so a headword boost applies only when the definition also contains the term. Candidates are collected up to 5 × the display limit, then sorted; beyond that the "+" truncation mark appears.
+- **Still not implemented:** a complete bundled Romanian dictionary (data licences not confirmed) and in-app downloads (against the offline philosophy).
+
 ## History
 
+- 2.2.0 — 2026-10-27 (previous: 2.1.0): relevance ranking in text search; tests updated.
 - 2.1.0 — 2026-10-27 (previous: 1.0.0): 431-entry demo set; free-dictionary guide.
 - 1.0.0 — 2026-10-14: first release.
