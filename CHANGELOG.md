@@ -4,7 +4,7 @@
 
 Anterior: 2.2.0. Îmbină linia din hub (2.0.0, 2026-10-26) cu linia acestui depozit, ca aplicația să poată trece pe origine proprie fără pierderi.
 
-- Din hub: modulele kit `store` și `dialog` (stocare cu prefix de slug) și modificările de interfață din hub 2.0.0.
+- Din hub: modulele kit `store` și `dialog` (stocare cu prefix de slug) și **fișa unificată** între dicționare (index unificat, câte o linie „pe scurt” pentru fiecare dicționar).
 - Păstrat din depozit: toate funcțiile 2.1–2.2.
 - Teste actualizate pentru versiune/număr de panouri; testele axe au rulat cu axe-core 4.10.2, iar verificările care cer `/home/fff-kit` nu au rulat aici.
 
