@@ -1,5 +1,14 @@
 # Jurnal de modificări — Lexicon
 
+## 2.3.0 — 2026-10-31
+
+Anterior: 2.2.0. Îmbină linia din hub (2.0.0, 2026-10-26) cu linia acestui depozit, ca aplicația să poată trece pe origine proprie fără pierderi.
+
+- Ținte tactile: casetele de bifare măsurau 13–18 px; acum 24 px (WCAG 2.5.8). Măsurat pe 360×740: 0 ținte sub 24 px, 0 texte sub 12 px.
+- Din hub: modulele kit `store` și `dialog` (stocare cu prefix de slug) și **fișa unificată** între dicționare (index unificat, câte o linie „pe scurt” pentru fiecare dicționar).
+- Păstrat din depozit: toate funcțiile 2.1–2.2.
+- Teste actualizate pentru versiune/număr de panouri; testele axe au rulat cu axe-core 4.10.2, iar verificările care cer `/home/fff-kit` nu au rulat aici.
+
 ## 2.2.0 — 2026-10-27 (anterior: 2.1.0)
 
 - Căutarea textuală în definiții: clasare euristică după relevanță (nu BM25); limita se aplică după sortare.
