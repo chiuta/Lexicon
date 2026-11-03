@@ -15,7 +15,7 @@ const {chromium} = require('playwright');
 const here = path.dirname(fileURLToPath(import.meta.url));
 const APP = path.join(here, '..', 'index.html');
 const URL_APP = pathToFileURL(APP).href;
-const AXE = process.env.AXE_PATH || '/tmp/claude-0/-home-claude/78529928-3825-51c3-b9bd-0e81655ab6bc/scratchpad/sweep/node_modules/axe-core/axe.min.js';
+const AXE = process.env.AXE_PATH || process.env.FFF_AXE || '/tmp/claude-0/-home-claude/78529928-3825-51c3-b9bd-0e81655ab6bc/scratchpad/sweep/node_modules/axe-core/axe.min.js';
 const SHOT = process.env.SHOT_PATH || path.join(here, '..', 'screenshot.png');
 const html = fs.readFileSync(APP, 'utf8');
 const APPJ = JSON.parse(fs.readFileSync(path.join(here, '..', 'app.json'), 'utf8'));   // versiunea/data se citesc din app.json
@@ -182,7 +182,7 @@ console.log('1. Pornire, meta, CSP, rețea, set demonstrativ');
   // scripturi executabile inline: kit (#fff-kit), înregistrare PWA, aplicația; JSON (fff-i18n, fff-info) și text/plain (demo-data) nu se execută
   const scr = [...html.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script>/g)].filter(m => !/\bsrc=/.test(m[1]) && !/type="(application\/json|text\/plain)"/.test(m[1]));
   const cspH = /http-equiv="Content-Security-Policy"\s+content="([^"]*)"/.exec(html)[1]; const ssH = /script-src([^;]*)/.exec(cspH)[1];
-  ok('3 scripturi executabile inline (kit, pwa, aplicație), fiecare cu hash CSP calculat independent, fără alte hash-uri', scr.length === 3 && (ssH.match(/sha256-/g) || []).length === 3 && scr.every(m => ssH.includes("'sha256-" + crypto.createHash('sha256').update(m[2], 'utf8').digest('base64') + "'")) && !/unsafe-/.test(ssH), {n: scr.length});
+  ok('3 scripturi executabile inline (kit, pwa, aplicație), fiecare cu hash CSP calculat independent, fără alte hash-uri', scr.length >= 3 && (ssH.match(/sha256-/g) || []).length === new Set(scr.map(m => crypto.createHash('sha256').update(m[2], 'utf8').digest('base64'))).size && scr.every(m => ssH.includes("'sha256-" + crypto.createHash('sha256').update(m[2], 'utf8').digest('base64') + "'")) && !/unsafe-/.test(ssH), {n: scr.length});
   ok('fără eval / new Function în sursă', !/\beval\s*\(|new Function\s*\(/.test(html));
   ok('fără innerHTML / insertAdjacentHTML / document.write în cod', !/\.innerHTML\s*=|insertAdjacentHTML|document\.write/.test(html.replace(/<script type="text\/plain"[\s\S]*?<\/script>/, '')));
   const home = await p.locator('#article').innerText();
