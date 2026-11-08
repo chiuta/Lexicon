@@ -1,5 +1,8 @@
 # Jurnal de modificări — Lexicon
 
+## 2.4.3 — 2026-11-08
+Doar documentare: README (8 limbi) precizează statutul fișierelor din `exemple/` (intrări-exemplu scrise de mână; model.json declară domeniu public; se aplică și MIT din rădăcină).
+
 ## 2.4.0 — 2026-11-02 (reîmprospătare kit)
 
 - Nou (kit): **Sincronizare între dispozitive** (`FFF.sync`) — în dialogul «Transparență» (clic pe versiune → Copie de siguranță): conectezi două dispozitive direct (WebRTC, cod/QR, fără server și fără cont) și își schimbă datele aplicației; cea mai recentă valoare câștigă, secretele (chei API, parole) nu se trimit, ștergerile nu se propagă. Aplicarea trece prin importul kitului (confirmare, chei permise, rollback).

@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · **Português** · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versão:** 2.4.2 · **Última atualização:** 2026-11-08
+**Versão:** 2.4.3 · **Última atualização:** 2026-11-08
 
 Idiomas da interface: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -20,7 +20,7 @@ O Lexicon é um motor de dicionário que funciona totalmente offline, num único
 5. **Cartões de estudo** (SM-2 simplificado), **Ferramentas** (exportação dos favoritos em CSV/JSON/Markdown, exportação do subconjunto pesquisado, «Verificar a ortografia de um texto», cópia de segurança `.fff.json`, «Apagar tudo»).
 
 ## Traz o teu próprio dicionário
-A pasta `exemple/` contém `model.tsv` e `model.json` (formato mínimo: palavra, definição, opcionalmente formas, categoria, exemplos, etimologia).
+A pasta `exemple/` contém `model.tsv` e `model.json` (formato mínimo: palavra, definição, opcionalmente formas, categoria, exemplos, etimologia). Ambos os ficheiros são entradas de exemplo escritas à mão, não retiradas de nenhum dicionário de terceiros; `model.json` declara-as «domínio público (exemplo)» e a licença MIT do repositório (ver `LICENSE`) também as abrange.
 
 **Verifica a licença de cada fonte (por exemplo, os dados publicados pelo dexonline têm condições próprias de licença e atribuição; não verifiquei as condições atuais).** A aplicação não inclui nem descarrega nenhum dicionário de licença incerta; a responsabilidade pelos dados importados é tua.
 

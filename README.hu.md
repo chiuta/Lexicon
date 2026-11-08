@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · **Magyar**
 
-**Verzió:** 2.4.2 · **Utolsó frissítés:** 2026-11-08
+**Verzió:** 2.4.3 · **Utolsó frissítés:** 2026-11-08
 
 A felület nyelvei: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -20,7 +20,7 @@ A Lexicon egy szótármotor, amely teljesen offline, egyetlen HTML-fájlban fut.
 5. **Memóriakártyák** (egyszerűsített SM-2), **Eszközök** (kedvencek exportálása CSV/JSON/Markdown formátumban, a keresett részhalmaz exportálása, „Szöveg helyesírásának ellenőrzése”, `.fff.json` biztonsági mentés, „Minden törlése”).
 
 ## Hozd a saját szótáradat
-Az `exemple/` mappa tartalmazza a `model.tsv` és a `model.json` fájlt (minimális formátum: szó, definíció, opcionálisan alakok, kategória, példák, etimológia).
+Az `exemple/` mappa tartalmazza a `model.tsv` és a `model.json` fájlt (minimális formátum: szó, definíció, opcionálisan alakok, kategória, példák, etimológia). Mindkét fájl kézzel írt példabejegyzéseket tartalmaz, nem harmadik fél szótárából származnak; a `model.json` „közkincs (példa)” besorolást ad nekik, és a tárhely MIT licence (lásd `LICENSE`) is vonatkozik rájuk.
 
 **Ellenőrizd minden forrás licencét (például a dexonline által közzétett adatoknak saját licenc- és forrásmegjelölési feltételeik vannak; a jelenlegi feltételeket nem ellenőriztem).** Az alkalmazás nem tartalmaz és nem tölt le bizonytalan licencű szótárat; az importált adatokért a felelősség téged terhel.
 

@@ -2,7 +2,7 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 2.4.2 · **Last updated:** 2026-11-08
+**Version:** 2.4.3 · **Last updated:** 2026-11-08
 
 **Status:** stable · **Offline:** complete (no network requests; the guide is text only)
 
@@ -26,7 +26,7 @@ When a word appears in several active dictionaries (or has synonyms) the article
 5. **Flashcards** (simplified SM-2), **Tools** (export favourites as CSV/JSON/Markdown, export the searched subset, "Check the spelling of a text", `.fff.json` backup, "Delete everything").
 
 ## Bring your own dictionary
-The `exemple/` folder contains `model.tsv` and `model.json` (minimal format: word, definition, optionally forms, category, examples, etymology).
+The `exemple/` folder contains `model.tsv` and `model.json` (minimal format: word, definition, optionally forms, category, examples, etymology). Both files are hand-written example entries, not taken from any third-party dictionary; `model.json` declares them "public domain (example)", and the repository's MIT licence (see `LICENSE`) also covers them.
 
 **Check the licence of every source (for example, data published by dexonline has its own licence and attribution conditions; I have not verified the current conditions).** The app neither includes nor downloads any dictionary of uncertain licence; responsibility for the imported data is yours.
 

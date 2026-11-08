@@ -2,7 +2,7 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 2.4.2 · **Ultima actualizare:** 2026-11-08
+**Versiune:** 2.4.3 · **Ultima actualizare:** 2026-11-08
 
 **Stare:** stabil · **Offline:** complet (nicio cerere de rețea; ghidul conține doar text)
 
@@ -26,7 +26,7 @@ Când un cuvânt apare în mai multe dicționare active (sau are sinonime), arti
 5. **Flashcards** (SM-2 simplificat), **Instrumente** (export favorite CSV/JSON/Markdown, export subset căutat, „Verifică ortografia unui text”, copie de rezervă `.fff.json`, „Șterge tot”).
 
 ## Aduce-ți propriul dicționar
-Folderul `exemple/` conține `model.tsv` și `model.json` (formatul minim: cuvânt, definiție, opțional forme, categorie, exemple, etimologie).
+Folderul `exemple/` conține `model.tsv` și `model.json` (formatul minim: cuvânt, definiție, opțional forme, categorie, exemple, etimologie). Ambele fișiere sunt intrări-exemplu scrise de mână, nepreluate din vreun dicționar terț; `model.json` le declară „domeniu public (exemplu)”, iar licența MIT a depozitului (vezi `LICENSE`) le acoperă și ea.
 
 **Verifică licența fiecărei surse (de exemplu datele publicate de dexonline au condiții proprii de licență și atribuire; nu am verificat condițiile actuale).** Aplicația nu include și nu descarcă niciun dicționar de licență incertă; răspunderea pentru datele importate îți aparține.
 

@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · **Deutsch** · [Magyar](README.hu.md)
 
-**Version:** 2.4.2 · **Zuletzt aktualisiert:** 2026-11-08
+**Version:** 2.4.3 · **Zuletzt aktualisiert:** 2026-11-08
 
 Oberflächensprachen: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -20,7 +20,7 @@ Lexicon ist eine Wörterbuch-Engine, die vollständig offline in einer einzigen 
 5. **Karteikarten** (vereinfachtes SM-2), **Werkzeuge** (Export der Favoriten als CSV/JSON/Markdown, Export der gesuchten Teilmenge, „Rechtschreibung eines Textes prüfen“, Sicherung als `.fff.json`, „Alles löschen“).
 
 ## Bring dein eigenes Wörterbuch mit
-Der Ordner `exemple/` enthält `model.tsv` und `model.json` (Minimalformat: Wort, Definition, optional Formen, Kategorie, Beispiele, Etymologie).
+Der Ordner `exemple/` enthält `model.tsv` und `model.json` (Minimalformat: Wort, Definition, optional Formen, Kategorie, Beispiele, Etymologie). Beide Dateien enthalten von Hand geschriebene Beispieleinträge, nicht aus einem Fremdwörterbuch übernommen; `model.json` erklärt sie als „gemeinfrei (Beispiel)“, und auch die MIT-Lizenz des Repositorys (siehe `LICENSE`) deckt sie ab.
 
 **Prüfe die Lizenz jeder Quelle (zum Beispiel haben die von dexonline veröffentlichten Daten eigene Lizenz- und Namensnennungsbedingungen; ich habe die aktuellen Bedingungen nicht geprüft).** Die App enthält und lädt kein Wörterbuch mit unklarer Lizenz herunter; die Verantwortung für die importierten Daten liegt bei dir.
 
