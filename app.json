@@ -10,16 +10,17 @@
     "clipboard",
     "serviceWorker",
     "indexedDB",
-    "localStorage"
+    "localStorage",
+    "WebGL"
   ],
   "storageKeys": [],
-  "sizeBytes": 670616,
-  "sha256": "889d2812ef134867835eaaa9249f7f887fab6e8f972651e033abfa195464ccb7",
+  "sizeBytes": 722261,
+  "sha256": "a18cde4f13299132cc286a752ae7fad92794d5e33aa4bbcf17fdcab9dcbba0dc",
   "csp": {
     "present": true,
     "directives": {
       "default-src": "'none'",
-      "script-src": "sha256×4",
+      "script-src": "sha256×5",
       "style-src": "'unsafe-inline'",
       "img-src": "'self' data: blob:",
       "media-src": "data: blob:",
