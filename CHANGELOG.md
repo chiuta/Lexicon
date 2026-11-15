@@ -1,5 +1,9 @@
 # Jurnal de modificări — Lexicon
 
+## 2.4.8 — 2026-11-15
+
+- Nou: texturi fractale hiper-detaliate (fff-texturi 1.1.2) — fundalul și suprafețele mari (carduri, panouri, antete, butoane; filele și dialogurile ascunse la încărcare, când se deschid) primesc un material generat local (WebGL2, fără rețea și fără imagini), care se repetă fără cusătură; culorile aplicației rămân ale ei. Se oprește din dialogul „Transparență” sau cu `?notex=1`.
+
 ## 2.4.3 — 2026-11-08
 Doar documentare: README (8 limbi) precizează statutul fișierelor din `exemple/` (intrări-exemplu scrise de mână; model.json declară domeniu public; se aplică și MIT din rădăcină).
 
