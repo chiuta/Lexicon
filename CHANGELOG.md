@@ -1,5 +1,9 @@
 # Jurnal de modificări — Lexicon
 
+## 2.5.3 — 2026-11-19
+
+- Memoria locală (`localStorage`) cu valoarea coruptă `null` la cheia de setări făcea ca aplicația să nu mai pornească deloc (`TypeError: Cannot read properties of null (reading 'mode')` la `init`), până la golirea manuală a stocării; citirea validează acum tipul (`null` sau un tip diferit de cel așteptat → valoarea implicită), deci setările, istoricul, favoritele și cardurile pornesc de la zero în loc să blocheze aplicația (constatat de bateria adversarială din 19 noiembrie 2026; verificat înainte/după cu `null`, număr, șir, listă și obiect gol)
+
 ## 2.5.2 — 2026-11-17
 
 - Compatibilitate cu browsere mai vechi (Chrome/Edge 55+, Firefox 52+, Safari 10.1+/iOS 10.3+): kitul 1.8.0 aduce stratul de compatibilitate (rezerve pentru API-urile care lipsesc în motoarele vechi), iar sintaxa JavaScript mai nouă decât ES2017 a fost înlocuită cu forme echivalente acolo unde exista; expresiile regulate noi și `import()` trec prin rezerve. Fără modificări de funcționalitate intenționate. Verificat cu parser ES2017 și într-un motor vechi simulat, nu pe dispozitive reale.
